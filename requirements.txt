@@ -4,10 +4,10 @@ numpy
 gspread
 google-auth
 oauth2client
+google-auth-oauthlib
 google-auth-httplib2
 bcrypt
 altair
 plotly
 reportlab
 python-dateutil
-
