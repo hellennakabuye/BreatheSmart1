@@ -7,7 +7,7 @@ def connect_to_sheets():
         "https://www.googleapis.com/auth/drive",
     ]
 
-    credentials = Credentials.from_service_account_info(
+    credentials = ServiceAccountCredentials.from_json_keyfile_name(
         st.secrets["gcp_service_account"],
         scopes=scope
     )
