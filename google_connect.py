@@ -1,5 +1,6 @@
 import gspread
 from oauth2client.service_account import ServiceAccountCredentials
+from google.oauth2.service_account import Credentials
 
 def connect_to_sheets():
     scope = [
@@ -7,7 +8,7 @@ def connect_to_sheets():
         "https://www.googleapis.com/auth/drive",
     ]
 
-    credentials = ServiceAccountCredentials.from_json_keyfile_name(
+    credentials = Credentials.from_service_account_info(
         st.secrets["gcp_service_account"],
         scopes=scope
     )
